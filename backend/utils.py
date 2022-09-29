@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 
 
 def write_csv(path, file_name, data):
@@ -12,3 +13,9 @@ def write_csv(path, file_name, data):
         os.makedirs(path)
     with open(os.path.join(path, file_name), 'wb') as f:
         f.write(data)
+
+
+def read_csv(path, file_name):
+    file_path = os.path.join(path, file_name)
+    data = pd.read_csv(file_path, delimiter=',')
+    return data
