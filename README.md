@@ -52,8 +52,8 @@ secure and does not involve specifying email password in code (unlike IMAP)
  #### Schema Design
  
  - Before creating the tables, I did the following:
-    - In order to understand each CSV column, I performed initial analysis using Excel and Pandas
-    - I identified entities, their relationships
+    - In order to understand each CSV column, I performed analysis using Excel and Pandas
+    - I identified entities, their relationships and column data types
     - I created an ERD diagram based on the identifications
  - I decided to save all reactions columns into a single json column called `interactions` as this saves space and 
  reduces clutter
@@ -93,10 +93,11 @@ and downloads the attachment.
 ## Task 2 - Facebook Insights
 
 ### Running
- 1. Import the database schema
- 2. Run `python -m backend.task2` for reading emails and saving reports
- 3. Run script `sql/task2/extract_insert.sql` to import CSV into table
- 4. Run queries in `sql/task2/view_time_insights.sql` to gather insights
+ 1. Import the database schema from `sql/schema.sql`
+ 2. Copy file `dwh_dl_facebook_post_insights.csv` to the repository
+ 3. Run `python -m backend.task2` for reading emails and saving reports
+ 4. Run script `sql/task2/extract_insert.sql` to import CSV into table
+ 5. Run queries in `sql/task2/view_time_insights.sql` to gather insights
 
 ### Approach
 
