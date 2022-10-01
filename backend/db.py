@@ -50,11 +50,6 @@ def write_reports_to_db(schema_name, reports):
     except Exception:
         return False
     return True
-    # i = 0
-    # while(i+10 < len(post_statistics_df)):
-    #     with Engine.connect().execution_options(autocommit=True) as conn:
-    #         post_statistics_df[i:i+10].to_sql('post_statistics', con=conn, if_exists='append', index=False, method=postgres_upsert)
-    #     i += 10
 
 
 def get_tables_df(reports):

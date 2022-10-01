@@ -40,7 +40,6 @@ def download_reports(path):
     """
     Filter emails, downloads valid attachments and returns the file names
     :param path: path to download the reports
-    :return:
     """
     file_names = []
     try:
